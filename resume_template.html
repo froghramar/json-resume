@@ -153,7 +153,20 @@
         <h2><span class="icon">🎓</span>Education</h2>
         <ul>
         {% for edu in education %}
-            <li>{{ edu.degree }} from {{ edu.institution }} ({{ edu.year }})</li>
+            <li style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+                {% if edu.logo %}
+                <img src="{{ edu.logo }}" alt="{{ edu.institution }} logo" style="width:32px;height:32px;border-radius:6px;object-fit:contain;background:#fff;border:1px solid #e3eaf3;box-shadow:0 1px 4px rgba(42,122,226,0.08);">
+                {% endif %}
+                <div>
+                    <span style="font-weight:bold;">{{ edu.degree }}</span> from 
+                    {% if edu.website %}
+                    <a href="{{ edu.website }}" target="_blank">{{ edu.institution }}</a>
+                    {% else %}
+                    {{ edu.institution }}
+                    {% endif %}
+                    ({{ edu.year }})
+                </div>
+            </li>
         {% endfor %}
         </ul>
     </div>

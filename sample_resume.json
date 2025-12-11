@@ -13,7 +13,9 @@
     {
       "degree": "Bachelor of Science in Software Engineering",
       "institution": "University of Dhaka",
-      "year": "2017"
+      "year": "2017",
+      "logo": "assets/du_logo.svg",
+      "website": "https://www.du.ac.bd"
     }
   ],
   "experience": [

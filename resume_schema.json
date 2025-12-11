@@ -25,7 +25,9 @@
         "properties": {
           "degree": { "type": "string" },
           "institution": { "type": "string" },
-          "year": { "type": "string" }
+          "year": { "type": "string" },
+          "logo": { "type": "string" },
+          "website": { "type": "string" }
         }
       }
     },

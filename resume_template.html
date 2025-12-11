@@ -143,7 +143,7 @@
         <div class="contact-item"><span class="icon">✉️</span><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></div>
         <div class="contact-item"><span class="icon">📞</span><a href="tel:{{ contact.phone }}">{{ contact.phone }}</a></div>
         <div class="contact-item"><span class="icon">📍</span>{{ contact.address }}</div>
-        {% if contact.linkedin %}<div class="contact-item"><span class="icon">🔗</span><a href="{{ contact.linkedin }}">{{ contact.linkedin }}</a></div>{% endif %}
+        {% if contact.linkedin %}<div class="contact-item"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:18px;height:18px;margin-right:6px;vertical-align:middle;filter:grayscale(0);margin-right:6px;"> <a href="{{ contact.linkedin }}">{{ contact.linkedin }}</a></div>{% endif %}
         {% if education and education[0] %}
         <div class="contact-item">
             {% if education[0].logo %}

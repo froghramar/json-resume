@@ -16,7 +16,7 @@ This project generates a formatted resume from a JSON file, with schema validati
 
 3. **Install required packages:**
    ```bash
-   pip install jsonschema
+   pip install -r requirements.txt
    ```
 
 4. **Run the generator script:**

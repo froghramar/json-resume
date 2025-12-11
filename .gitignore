@@ -19,3 +19,6 @@ Thumbs.db
 
 # Environment files
 .env
+
+# Generated resume PDF
+resume.pdf

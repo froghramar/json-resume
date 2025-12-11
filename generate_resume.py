@@ -1,6 +1,10 @@
+
 import json
 import sys
 from jsonschema import validate, ValidationError
+from jinja2 import Environment, FileSystemLoader
+from weasyprint import HTML
+
 
 # Load resume JSON and schema
 with open('sample_resume.json', 'r', encoding='utf-8') as f:
@@ -15,27 +19,17 @@ except ValidationError as e:
     print(f"Validation error: {e.message}")
     sys.exit(1)
 
-# Generate formatted resume (plain text)
-def generate_resume(resume):
-    lines = []
-    lines.append(f"Name: {resume['name']}")
-    lines.append(f"Email: {resume['contact']['email']}")
-    lines.append(f"Phone: {resume['contact']['phone']}")
-    lines.append(f"Address: {resume['contact']['address']}")
-    lines.append("")
-    lines.append(f"Summary: {resume['summary']}")
-    lines.append("")
-    lines.append("Education:")
-    for edu in resume['education']:
-        lines.append(f"  - {edu['degree']} from {edu['institution']} ({edu['year']})")
-    lines.append("")
-    lines.append("Experience:")
-    for exp in resume['experience']:
-        lines.append(f"  - {exp['title']} at {exp['company']} ({exp['start']} to {exp['end']})")
-        lines.append(f"    {exp['description']}")
-    lines.append("")
-    lines.append("Skills: " + ', '.join(resume['skills']))
-    return '\n'.join(lines)
+
+def render_html(resume, template_path="resume_template.html"):
+    env = Environment(loader=FileSystemLoader("."))
+    template = env.get_template(template_path)
+    return template.render(**resume)
+
+def generate_pdf_from_html(html_content, output_path="resume.pdf"):
+    HTML(string=html_content).write_pdf(output_path)
 
 if __name__ == "__main__":
-    print(generate_resume(resume))
+    html = render_html(resume)
+    with open("resume.html", "w", encoding="utf-8") as f:
+        f.write(html)
+    generate_pdf_from_html(html)

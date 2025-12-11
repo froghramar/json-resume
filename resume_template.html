@@ -1,0 +1,53 @@
+# PDF Resume Template (Jinja2 style)
+# Save as resume_template.html or .jinja2 for clarity
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ name }} - Resume</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { font-size: 2em; margin-bottom: 0; }
+        h2 { margin-top: 1.5em; }
+        .section { margin-bottom: 1em; }
+        .label { font-weight: bold; }
+        ul { margin: 0; padding-left: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <div class="section">
+        <span class="label">Email:</span> {{ contact.email }}<br>
+        <span class="label">Phone:</span> {{ contact.phone }}<br>
+        <span class="label">Address:</span> {{ contact.address }}
+    </div>
+    <div class="section">
+        <span class="label">Summary:</span><br>
+        {{ summary }}
+    </div>
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+        {% for edu in education %}
+            <li>{{ edu.degree }} from {{ edu.institution }} ({{ edu.year }})</li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Experience</h2>
+        <ul>
+        {% for exp in experience %}
+            <li>
+                <b>{{ exp.title }}</b> at {{ exp.company }} ({{ exp.start }} to {{ exp.end }})<br>
+                {{ exp.description }}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Skills</h2>
+        {{ skills | join(", ") }}
+    </div>
+</body>
+</html>

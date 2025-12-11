@@ -41,44 +41,45 @@
       "company_website": "https://www.toptal.com/resume/feroz-ahmmed"
     },
     {
-      "title": "Senior .NET Developer",
       "company": "SELISE Group",
-      "location": "Dhaka, Bangladesh (Remote)",
-      "start": "2021-05",
-      "end": "2022-05",
-      "description": "Led and mentored a team of 10 developers, providing technical guidance, code reviews, and best practices.",
-      "highlights": [
-        "Onboarded and trained new team members on microservices architecture.",
-        "Spearheaded migration of multiple microservices to newer .NET versions.",
-        "Implemented comprehensive monitoring and observability solutions.",
-        "Established logging and monitoring best practices.",
-        "Architected and maintained distributed tracing and centralized logging infrastructure.",
-        "Collaborated with stakeholders to define technical roadmaps.",
-        "Conducted technical training sessions and knowledge-sharing workshops."
-      ],
-      "skills": [".NET", "Azure DevOps", "Microservices", "Application Insights", "ElasticSearch", "Kibana", "Seq"],
       "company_image": "assets/selise_logo.jpg",
-      "company_website": "https://selisegroup.com"
-    },
-    {
-      "title": ".NET Developer",
-      "company": "SELISE Group",
-      "location": "Hybrid",
-      "start": "2019-04",
-      "end": "2021-05",
-      "description": "Served as the primary developer, leading the development of a significant portion of the application using C# and .NET Core.",
-      "highlights": [
-        "Designed and developed microservices architecture (DDD, CQRS, Event Sourcing).",
-        "Implemented serverless solutions using Azure Functions.",
-        "Containerized microservices with Docker and orchestrated deployments using Kubernetes.",
-        "Built and maintained CI/CD pipelines using Azure DevOps.",
-        "Leveraged Azure CosmosDB as the event store and data persistence layer.",
-        "Implemented event-driven architecture for asynchronous communication.",
-        "Configured Kubernetes deployments with auto-scaling policies and health checks."
-      ],
-      "skills": [".NET Core", "Azure Functions", "Docker", "Kubernetes", "CosmosDB", "CI/CD"],
-      "company_image": "assets/selise_logo.jpg",
-      "company_website": "https://selisegroup.com"
+      "company_website": "https://selisegroup.com",
+      "roles": [
+        {
+          "title": "Senior .NET Developer",
+          "location": "Dhaka, Bangladesh (Remote)",
+          "start": "2021-05",
+          "end": "2022-05",
+          "description": "Led and mentored a team of 10 developers, providing technical guidance, code reviews, and best practices.",
+          "highlights": [
+            "Onboarded and trained new team members on microservices architecture.",
+            "Spearheaded migration of multiple microservices to newer .NET versions.",
+            "Implemented comprehensive monitoring and observability solutions.",
+            "Established logging and monitoring best practices.",
+            "Architected and maintained distributed tracing and centralized logging infrastructure.",
+            "Collaborated with stakeholders to define technical roadmaps.",
+            "Conducted technical training sessions and knowledge-sharing workshops."
+          ],
+          "skills": [".NET", "Azure DevOps", "Microservices", "Application Insights", "ElasticSearch", "Kibana", "Seq"]
+        },
+        {
+          "title": ".NET Developer",
+          "location": "Dhaka, Bangladesh (Hybrid)",
+          "start": "2019-04",
+          "end": "2021-05",
+          "description": "Served as the primary developer, leading the development of a significant portion of the application using C# and .NET Core.",
+          "highlights": [
+            "Designed and developed microservices architecture (DDD, CQRS, Event Sourcing).",
+            "Implemented serverless solutions using Azure Functions.",
+            "Containerized microservices with Docker and orchestrated deployments using Kubernetes.",
+            "Built and maintained CI/CD pipelines using Azure DevOps.",
+            "Leveraged Azure CosmosDB as the event store and data persistence layer.",
+            "Implemented event-driven architecture for asynchronous communication.",
+            "Configured Kubernetes deployments with auto-scaling policies and health checks."
+          ],
+          "skills": [".NET Core", "Azure Functions", "Docker", "Kubernetes", "CosmosDB", "CI/CD"]
+        }
+      ]
     },
     {
       "title": "Full Stack Developer",

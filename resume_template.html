@@ -197,6 +197,44 @@
     <div class="section">
         <h2><span class="icon">💼</span>Experience</h2>
         {% for exp in experience %}
+        {% if exp.roles %}
+        <div class="exp-card">
+            <div style="display:flex; align-items:center; gap:12px;">
+                {% if exp.company_image %}
+                <img src="{{ exp.company_image }}" alt="{{ exp.company }} logo" style="width:32px;height:32px;border-radius:6px;object-fit:contain;background:#fff;border:1px solid #e3eaf3;box-shadow:0 1px 4px rgba(42,122,226,0.08);">
+                {% endif %}
+                <span class="exp-company" style="font-size:1.1em;font-weight:bold;">
+                    {% if exp.company_website %}
+                    <a href="{{ exp.company_website }}" target="_blank">{{ exp.company }}</a>
+                    {% else %}
+                    {{ exp.company }}
+                    {% endif %}
+                </span>
+            </div>
+            <div style="margin-top:10px;">
+                {% for role in exp.roles %}
+                <div style="margin-bottom:18px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <span class="exp-title">{{ role.title }}</span>
+                        <span class="exp-dates">{{ role.start }} – {{ role.end }}</span>
+                    </div>
+                    {% if role.location %}<div class="exp-location">{{ role.location }}</div>{% endif %}
+                    <div style="margin-top:6px;">{{ role.description }}</div>
+                    {% if role.highlights %}
+                    <ul class="exp-highlights">
+                        {% for h in role.highlights %}
+                        <li>{{ h }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% if role.skills %}
+                    <div class="exp-skills"><span class="label">Skills:</span> {{ role.skills | join(", ") }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
         <div class="exp-card">
             <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
                 <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
@@ -229,6 +267,7 @@
             <div class="exp-skills"><span class="label">Skills:</span> {{ exp.skills | join(", ") }}</div>
             {% endif %}
         </div>
+        {% endif %}
         {% endfor %}
     </div>
     <div class="section">

@@ -35,25 +35,59 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["title", "company", "start", "end", "description"],
-        "properties": {
-          "title": { "type": "string" },
-          "company": { "type": "string" },
-          "location": { "type": "string" },
-          "start": { "type": "string" },
-          "end": { "type": "string" },
-          "description": { "type": "string" },
-          "highlights": {
-            "type": "array",
-            "items": { "type": "string" }
+        "oneOf": [
+          {
+            "required": ["company", "roles"],
+            "properties": {
+              "company": { "type": "string" },
+              "company_image": { "type": "string" },
+              "company_website": { "type": ["string", "null"] },
+              "roles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["title", "start", "end", "description"],
+                  "properties": {
+                    "title": { "type": "string" },
+                    "location": { "type": "string" },
+                    "start": { "type": "string" },
+                    "end": { "type": "string" },
+                    "description": { "type": "string" },
+                    "highlights": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    },
+                    "skills": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
           },
-          "skills": {
-            "type": "array",
-            "items": { "type": "string" }
-          },
-          "company_image": { "type": "string" },
-          "company_website": { "type": ["string", "null"] }
-        }
+          {
+            "required": ["title", "company", "start", "end", "description"],
+            "properties": {
+              "title": { "type": "string" },
+              "company": { "type": "string" },
+              "location": { "type": "string" },
+              "start": { "type": "string" },
+              "end": { "type": "string" },
+              "description": { "type": "string" },
+              "highlights": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "skills": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "company_image": { "type": "string" },
+              "company_website": { "type": ["string", "null"] }
+            }
+          }
+        ]
       }
     },
     "skills": {

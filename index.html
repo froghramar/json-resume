@@ -18,15 +18,28 @@
                 <iframe id="resumeFrame" src="resume.html" title="Resume" scrolling="no"></iframe>
         </div>
         <script>
-            // Auto-resize iframe to fit content height
-            function resizeIframe() {
-                var iframe = document.getElementById('resumeFrame');
-                if (iframe && iframe.contentWindow && iframe.contentWindow.document.body) {
-                    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        // Auto-resize iframe to fit content height, robust for dynamic content
+        function resizeIframe() {
+            var iframe = document.getElementById('resumeFrame');
+            if (!iframe) return;
+            try {
+                var doc = iframe.contentDocument || iframe.contentWindow.document;
+                if (!doc) return;
+                // Wait for all images and fonts to load
+                var setHeight = function() {
+                    iframe.style.height = doc.documentElement.scrollHeight + 'px';
+                };
+                if (doc.readyState !== 'complete') {
+                    doc.onreadystatechange = function() {
+                        if (doc.readyState === 'complete') setTimeout(setHeight, 50);
+                    };
+                } else {
+                    setTimeout(setHeight, 50);
                 }
-            }
-            document.getElementById('resumeFrame').addEventListener('load', resizeIframe);
-            window.addEventListener('resize', resizeIframe);
+            } catch (e) {}
+        }
+        document.getElementById('resumeFrame').addEventListener('load', resizeIframe);
+        window.addEventListener('resize', resizeIframe);
         </script>
 </body>
 </html>

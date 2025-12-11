@@ -25,8 +25,11 @@ def render_html(resume, template_path="resume_template.html"):
     template = env.get_template(template_path)
     return template.render(**resume)
 
+import os
+
 def generate_pdf_from_html(html_content, output_path="resume.pdf"):
-    HTML(string=html_content).write_pdf(output_path)
+    base_url = os.path.abspath(os.path.dirname(__file__))
+    HTML(string=html_content, base_url=base_url).write_pdf(output_path)
 
 if __name__ == "__main__":
     html = render_html(resume)

@@ -22,5 +22,6 @@
       "description": "Developed and maintained web applications using JavaScript, Python, and React."
     }
   ],
-  "skills": ["JavaScript", "Python", "React", "Node.js", "SQL"]
+  "skills": ["JavaScript", "Python", "React", "Node.js", "SQL"],
+  "profile_picture": "profile.jpg"
 }

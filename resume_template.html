@@ -286,20 +286,20 @@
                         <div>
                             <span class="exp-title">{{ role.title }}</span>
                         </div>
-                        <div style="color:#888; font-size:0.95em; margin-bottom:2px;">
-                            <span class="exp-dates">
-                                {{ role.start }} – {{ role.end }}
-                                {% if role.start and role.end %}
-                                    {% set start_year = role.start.split('-')[0] | int %}
-                                    {% set start_month = role.start.split('-')[1] | int %}
-                                    {% set end_year = role.end.split('-')[0] | int %}
-                                    {% set end_month = role.end.split('-')[1] | int %}
-                                    {% set total_months = (end_year - start_year) * 12 + (end_month - start_month) + 1 %}
-                                    &nbsp;•&nbsp;{{ years }} year{% if years != 1 %}s{% endif %}{% if months > 0 %} {{ months }} month{% if months > 1 %}s{% endif %}{% endif %}
-                                {% endif %}
-                            </span>
-                        </div>
                         <div {% if not loop.last %}class="exp-role-content-bordered"{% endif %}>
+                            <div style="color:#888; font-size:0.95em; margin-bottom:2px;">
+                                <span class="exp-dates">
+                                    {{ role.start }} – {{ role.end }}
+                                    {% if role.start and role.end %}
+                                        {% set start_year = role.start.split('-')[0] | int %}
+                                        {% set start_month = role.start.split('-')[1] | int %}
+                                        {% set end_year = role.end.split('-')[0] | int %}
+                                        {% set end_month = role.end.split('-')[1] | int %}
+                                        {% set total_months = (end_year - start_year) * 12 + (end_month - start_month) + 1 %}
+                                        &nbsp;•&nbsp;{{ years }} year{% if years != 1 %}s{% endif %}{% if months > 0 %} {{ months }} month{% if months > 1 %}s{% endif %}{% endif %}
+                                    {% endif %}
+                                </span>
+                            </div>
                             {% if role.location %}<div class="exp-location">{{ role.location }}</div>{% endif %}
                             <div style="margin-top:6px;">{{ role.description }}</div>
                             {% if role.highlights %}
@@ -346,7 +346,7 @@
                             {% set total_months = (end_year - start_year) * 12 + (end_month - start_month) + 1 %}
                             {% set years = (total_months // 12) %}
                             {% set months = (total_months % 12) %}
-                            ({{ years }} year{% if years != 1 %}s{% endif %}{% if months > 0 %} {{ months }} month{% if months > 1 %}s{% endif %}{% endif %})
+                            &nbsp;•&nbsp;{{ years }} year{% if years != 1 %}s{% endif %}{% if months > 0 %} {{ months }} month{% if months > 1 %}s{% endif %}{% endif %}
                         {% endif %}
                     </span>
                     {% if exp.location %}

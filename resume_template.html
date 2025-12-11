@@ -40,6 +40,11 @@
             margin-left: 8px;
             background: #f6faff;
         }
+        .exp-role-content-bordered {
+            border-left: 3px solid #2a7ae2;
+            padding-left: 25px;
+            margin-left: -28px;
+        }
         body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
@@ -245,19 +250,21 @@
             </div>
             <div style="margin-top:10px; margin-left:12px;">
                 {% for role in exp.roles %}
-                <div style="margin-bottom:18px;">
-                    <div class="exp-role-timeline">
+                <div style="margin-bottom:18px; display:flex; align-items:flex-start;">
+                    <div class="exp-role-timeline" style="margin-right:0; align-items:center;">
                         <div class="exp-role-timeline-marker">
                             <div class="exp-role-circle"></div>
                             {% if not loop.last %}
                             <div class="exp-role-line"></div>
                             {% endif %}
                         </div>
-                        <div style="flex:1;">
-                            <div style="display:flex;justify-content:space-between;align-items:center;">
-                                <span class="exp-title">{{ role.title }}</span>
-                                <span class="exp-dates">{{ role.start }} – {{ role.end }}</span>
-                            </div>
+                    </div>
+                    <div style="flex:1;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;">
+                            <span class="exp-title">{{ role.title }}</span>
+                            <span class="exp-dates">{{ role.start }} – {{ role.end }}</span>
+                        </div>
+                        <div class="exp-role-content-bordered">
                             {% if role.location %}<div class="exp-location">{{ role.location }}</div>{% endif %}
                             <div style="margin-top:6px;">{{ role.description }}</div>
                             {% if role.highlights %}

@@ -11,6 +11,11 @@
       "degree": "B.Sc. Computer Science",
       "institution": "Springfield University",
       "year": "2020"
+    },
+    {
+      "degree": "M.Sc. Artificial Intelligence",
+      "institution": "Tech Valley Institute",
+      "year": "2023"
     }
   ],
   "experience": [
@@ -19,9 +24,69 @@
       "company": "Tech Solutions Inc.",
       "start": "2021-01",
       "end": "2025-12",
-      "description": "Developed and maintained web applications using JavaScript, Python, and React."
+      "description": "Developed and maintained web applications using JavaScript, Python, and React.",
+      "highlights": [
+        "Led a team of 5 engineers to deliver a major product release ahead of schedule.",
+        "Implemented CI/CD pipelines, reducing deployment time by 40%.",
+        "Optimized database queries, improving app performance by 30%."
+      ]
+    },
+    {
+      "title": "AI Research Intern",
+      "company": "InnovateAI Labs",
+      "start": "2020-06",
+      "end": "2020-12",
+      "description": "Worked on natural language processing models and contributed to open-source AI projects.",
+      "highlights": [
+        "Published a paper on sentiment analysis in a peer-reviewed journal.",
+        "Developed a chatbot demo for a major client presentation.",
+        "Collaborated with a cross-functional team on multilingual NLP."
+      ]
+    },
+    {
+      "title": "Freelance Web Developer",
+      "company": "Self-Employed",
+      "start": "2019-03",
+      "end": "2020-05",
+      "description": "Built custom websites for small businesses using WordPress and JavaScript.",
+      "highlights": [
+        "Delivered 10+ websites with custom features for local businesses.",
+        "Provided SEO consulting, increasing client traffic by up to 50%.",
+        "Trained clients on website maintenance and content updates."
+      ]
     }
   ],
-  "skills": ["JavaScript", "Python", "React", "Node.js", "SQL"],
+  "skills": ["JavaScript", "Python", "React", "Node.js", "SQL", "TensorFlow", "Docker", "WordPress", "HTML", "CSS", "Git"],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "year": "2024"
+    },
+    {
+      "name": "Certified Scrum Master",
+      "issuer": "Scrum Alliance",
+      "year": "2022"
+    }
+  ],
+  "languages": [
+    {"language": "English", "proficiency": "Native"},
+    {"language": "Spanish", "proficiency": "Professional"},
+    {"language": "German", "proficiency": "Conversational"}
+  ],
+  "volunteer": [
+    {
+      "role": "Mentor",
+      "organization": "Code for Good",
+      "year": "2023",
+      "description": "Mentored high school students in Python and web development."
+    },
+    {
+      "role": "Event Organizer",
+      "organization": "Springfield Tech Meetup",
+      "year": "2022",
+      "description": "Organized monthly meetups for local tech professionals."
+    }
+  ],
   "profile_picture": "profile.jpg"
 }

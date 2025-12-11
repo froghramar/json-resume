@@ -33,6 +33,12 @@ def generate_pdf_from_html(html_content, output_path="resume.pdf"):
 
 if __name__ == "__main__":
     html = render_html(resume)
+    # Render HTML from template
+    html_out = render_html(resume)
+
+    # Write HTML to file for GitHub Pages embedding
     with open("resume.html", "w", encoding="utf-8") as f:
-        f.write(html)
-    generate_pdf_from_html(html)
+        f.write(html_out)
+
+    # Generate PDF from HTML
+    generate_pdf_from_html(html_out)

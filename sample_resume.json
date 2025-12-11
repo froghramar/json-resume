@@ -1,0 +1,26 @@
+{
+  "name": "Jane Doe",
+  "contact": {
+    "email": "jane.doe@example.com",
+    "phone": "+1-555-123-4567",
+    "address": "123 Main St, Springfield, USA"
+  },
+  "summary": "Experienced software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.",
+  "education": [
+    {
+      "degree": "B.Sc. Computer Science",
+      "institution": "Springfield University",
+      "year": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Tech Solutions Inc.",
+      "start": "2021-01",
+      "end": "2025-12",
+      "description": "Developed and maintained web applications using JavaScript, Python, and React."
+    }
+  ],
+  "skills": ["JavaScript", "Python", "React", "Node.js", "SQL"]
+}

@@ -143,18 +143,17 @@
     {
       "name": "Microsoft Certified: Azure Administrator Associate",
       "issuer": "Microsoft",
-      "year": "2022",
-      "expires": "2026"
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/FerozAhmmed-2789/D1E5CEC50F99C48A?sharingId=794F337D9A72D0A7"
     },
     {
       "name": "Microsoft Certified: Azure Fundamentals",
       "issuer": "Microsoft",
-      "year": "2020"
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/FerozAhmmed-2789/9AEBF90A39232074?sharingId=794F337D9A72D0A7"
     },
     {
       "name": "Microsoft Certified: Azure Developer Associate",
       "issuer": "Microsoft",
-      "year": "2021"
+      "link": "https://learn.microsoft.com/api/credentials/share/en-us/FerozAhmmed-2789/7820D16F95F543ED?sharingId=794F337D9A72D0A7"
     }
   ],
   "volunteer": [

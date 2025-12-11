@@ -352,7 +352,14 @@
         <h2><span class="icon">📜</span>Certifications</h2>
         <ul class="cert-list">
         {% for cert in certifications %}
-            <li>{{ cert.name }} ({{ cert.issuer }}, {{ cert.year }}{% if cert.expires %}, expires {{ cert.expires }}{% endif %})</li>
+            <li>
+                {% if cert.link %}
+                    <a href="{{ cert.link }}" target="_blank">{{ cert.name }}</a>
+                {% else %}
+                    {{ cert.name }}
+                {% endif %}
+                <span style="color:#555;"> ({{ cert.issuer }})</span>
+            </li>
         {% endfor %}
         </ul>
     </div>

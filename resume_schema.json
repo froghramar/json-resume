@@ -98,12 +98,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "issuer", "year"],
+        "required": ["name", "issuer"],
         "properties": {
           "name": { "type": "string" },
           "issuer": { "type": "string" },
-          "year": { "type": "string" },
-          "expires": { "type": "string" }
+          "link": { "type": "string" }
         }
       }
     },

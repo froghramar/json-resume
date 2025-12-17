@@ -4,7 +4,6 @@
   "required": ["name", "contact", "summary", "education", "experience", "skills"],
   "properties": {
     "name": { "type": "string" },
-    "headline": { "type": "string" },
     "profile_picture": { "type": "string" },
     "contact": {
       "type": "object",

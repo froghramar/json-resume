@@ -193,6 +193,18 @@
             margin-top: 8px;
             color: #2a7ae2;
         }
+        .skill-pill {
+            display: inline-block;
+            background: #eef6ff;
+            color: #2a7ae2;
+            border: 1px solid rgba(42,122,226,0.12);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        .skills-list { margin-top: 8px; }
         .exp-highlights {
             margin-top: 8px;
         }
@@ -311,7 +323,11 @@
                             </ul>
                             {% endif %}
                             {% if role.skills %}
-                            <div class="exp-skills"><span class="label">Skills:</span> {{ role.skills | join(", ") }}</div>
+                            <div class="exp-skills"><span class="label">Skills:</span>
+                                {% for s in role.skills %}
+                                <span class="skill-pill">{{ s }}</span>
+                                {% endfor %}
+                            </div>
                             {% endif %}
                         </div>
                     </div>
@@ -355,7 +371,11 @@
                 </ul>
                 {% endif %}
                 {% if exp.skills %}
-                <div class="exp-skills"><span class="label">Skills:</span> {{ exp.skills | join(", ") }}</div>
+                <div class="exp-skills"><span class="label">Skills:</span>
+                    {% for s in exp.skills %}
+                    <span class="skill-pill">{{ s }}</span>
+                    {% endfor %}
+                </div>
                 {% endif %}
             </div>
         </div>
@@ -385,7 +405,11 @@
     </div>
     <div class="section">
         <h2><span class="icon">🛠️</span>Skills</h2>
-        {{ skills | join(", ") }}
+        <div class="skills-list">
+            {% for s in skills %}
+            <span class="skill-pill">{{ s }}</span>
+            {% endfor %}
+        </div>
     </div>
     {% if certifications %}
     <div class="section">
